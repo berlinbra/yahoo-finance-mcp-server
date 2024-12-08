@@ -1,0 +1,19 @@
+[project]
+name = "yahoo_finance_service"
+version = "0.1.0"
+description = "Yahoo Finance MCP server for Claude Desktop"
+requires-python = ">= 3.8"
+dependencies = [
+    "yfinance>=0.2.33",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "requests>=2.31.0",
+    "anthropic-cli>=0.1.0"
+]
+
+[project.scripts]
+yahoo_finance_service = "yahoo_finance_service.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
